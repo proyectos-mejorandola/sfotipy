@@ -1,7 +1,20 @@
+@import 'nib'
+
+vendor-prefixes = o ms moz webkit official
+
+// animacion(n)
+// 	-webkit-animation n
+// 	-moz-animation n
+// 	-o-animation n
+// 	-ms-animation n
+// 	animation n
+
+
 @import 'normalize'
 
 gris_oscuro = #333333
 gris_claro = #818181
+gris_mas_claro = #F0F0F0
 rojo = #BD255B
 
 @import 'iconfonts'
@@ -84,23 +97,64 @@ img
 		height 5px
 		width 30%
 		position relative
+		animation 10s reproduccion infinite linear
 	.circle
 		background black
 		border-radius 50%
 		height 10px
 		position absolute
 		right 0
-		top -1px
+		top -2px
 		width 10px
+		animation 1s circle infinite
+
+@keyframes reproduccion
+	0%
+		width 0
+	100%
+		width 100%
+
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(2)
+		opacity 0
+
 .container
 	font-size 0
 	text-align center
+	background gris_mas_claro
 .header
 	text-align center
 	.title
 		font-size 1.2em
 		height 4em
 		line-height 4em
+	.isotipo
+			width 127px
+		.avatar
+			border-radius 50%
+			overflow hidden
+			width 38px
+		.username
+			position relative
+			top 8px
+			color gris_claro
+			margin-left .5em
+			&:after
+				content ""
+				border-left 7px solid transparent
+				border-top 7px solid gris_claro
+				border-right 7px solid transparent
+				display inline-block
+		.logo
+			background white
+		.wrap
+			width 62.5em
+			margin 0 auto
+			padding 1em 0
+			overflow hidden
 
 .menu
 	display none
@@ -108,6 +162,24 @@ img
 	&.small
 		margin 0 auto
 		width 20em
+.input
+	border 1px solid gris_claro
+	border-radius 5px
+	height 2.5em
+	line-height 2.5em
+	padding 0 1em 0 2em
+	outline 0
+.search-icon
+	position absolute
+	left 10px
+	top 13px
+	color gris_claro
+.close-icon 
+	color gris_claro
+	font-size 18px
+	position absolute
+	right 10px
+	top 9px
 // .playing
 // 	.description
 // 		text-align center
@@ -122,3 +194,84 @@ img
 		margin-right 0
 	p
 		margin .5em 0
+
+.logo
+.playlist
+	display none
+
+.playlist 
+	width 28.5em
+	padding 0 2em
+	border-left 1px solid gris_claro
+	.list
+		padding 0
+		margin 0
+	.item
+		padding 1em 0
+		list-style none
+	.action
+		font-size 14px
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 2em
+	.play
+		&.medium
+			width auto
+
+	.image
+		img
+			width 100%
+			height auto
+
+@media screen and (min-width:1000px)
+	body
+		background gris_mas_claro
+	.btn-menu
+		display none
+	.logo
+		display block
+	.play
+		margin 0 auto
+		&.large
+			overflow hidden
+			width 62.5em
+			.music
+				width 23em
+
+	.header
+		background gris_mas_claro
+		margin-bottom 1em
+		overflow hidden
+		&.border-bottom
+			border none
+		.title
+			display none
+		
+	.menu
+		display block
+		width 62.5em
+		margin 0 auto
+		.list
+			padding 0
+			margin 0
+		.item
+			list-style none
+			float left
+			border-top 5px solid transparent
+			&:hover
+				border-top 5px solid gris_claro
+			a
+				color gris_oscuro
+				display block
+				padding .5em
+				text-transform uppercase
+	.music
+		float left
+		.name
+		.author
+			display none
+
+	.playlist
+		display block
+
