@@ -1,7 +1,9 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
 gris_oscuro = #333333
 gris_claro = #818181
+rojo = #BD255B
 a
 	text-decoration none
 body
@@ -9,8 +11,11 @@ body
 	font-size 16px
 figure
 	margin 0
+img
+	vertical-align top
 //buttons
 .button-menu
+	color gris_oscuro
 	left .5em
 	margin-top -10px
 	position absolute
@@ -20,6 +25,22 @@ figure
 	padding 1.4rem
 	font-size 0
 	text-align center
+.action
+	color white
+	font-size 1.2em
+	margin-right .5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_claro
+	&.red
+		color red
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black,.3)
 .border-bottom
 	border-bottom 1px solid gris_claro
 .name
@@ -30,6 +51,51 @@ figure
 	position relative
 .author
 	color gris_claro
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.right-text
+	text-align right
+.relative
+	position relative
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.progress
+	margin 1em 0
+	position relative
+	.min
+	.max
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	.state
+		background rojo
+		border-radius 5px
+		height 5px
+		width 30%
+		position relative
+
+	.circle
+		background gris_oscuro
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
 .header
 	height 3.5em
 	// a
@@ -51,4 +117,6 @@ figure
 	p
 		margin .5em 0
 
-
+.playing
+	&.small
+		width 20em
