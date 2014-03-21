@@ -1,0 +1,279 @@
+@import 'nib'
+
+vendor-prefixes = o ms moz webkit official
+
+// animacion(n)
+// 	-webkit-animation n
+// 	-moz-animation n
+// 	-o-animation n
+// 	-ms-animation n
+// 	animation n
+
+
+@import 'normalize'
+
+gris_oscuro = #333333
+gris_claro = #818181
+gris_mas_claro = #F0F0F0
+rojo = #BD255B
+
+@import 'iconfonts'
+
+a
+	text-decoration none
+body
+	font-size 16px
+figure
+	margin 0
+img
+	vertical-align top
+
+//buttons
+.btn-menu
+	color gris_oscuro
+	float left
+	font-size 2em
+	left .7em
+	position relative
+	text-decoration none
+	top .7em
+.action
+	color white
+	cursor pointer
+	font-size 1.5em
+	margin-right .5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_oscuro
+//oocss classes
+.image
+	position relative
+.actions
+	background rgba(black,.2)
+	bottom 0
+	left 0
+	padding 1.5em
+	position absolute
+	right 0
+	text-align right
+.name
+	color gris_oscuro
+.author
+	color gris_claro
+.center
+	text-align center
+.padding-container
+	padding 2.8rem
+.padding-asset
+	padding 1.8rem 0
+.border-bottom
+	border-bottom 1px solid gris_claro
+.left
+	float left
+.right
+	float right
+.relative
+	position relative
+.pull-left
+	left 0
+	position absolute
+	top -4px
+.pull-right
+	position absolute
+	right 0
+	top -4px
+.line
+	.min
+	.max
+		font-size .8em
+	.total
+		background gris_claro
+		height 5px
+		width 75%
+		margin 0 auto
+	.rep
+		background rojo
+		height 5px
+		width 30%
+		position relative
+		animation 10s reproduccion infinite linear
+	.circle
+		background black
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+		animation 1s circle infinite
+
+@keyframes reproduccion
+	0%
+		width 0
+	100%
+		width 100%
+
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(2)
+		opacity 0
+
+.container
+	font-size 0
+	text-align center
+	background gris_mas_claro
+.header
+	text-align center
+	.title
+		font-size 1.2em
+		height 4em
+		line-height 4em
+	.isotipo
+			width 127px
+		.avatar
+			border-radius 50%
+			overflow hidden
+			width 38px
+		.username
+			position relative
+			top 8px
+			color gris_claro
+			margin-left .5em
+			&:after
+				content ""
+				border-left 7px solid transparent
+				border-top 7px solid gris_claro
+				border-right 7px solid transparent
+				display inline-block
+		.logo
+			background white
+		.wrap
+			width 62.5em
+			margin 0 auto
+			padding 1em 0
+			overflow hidden
+
+.menu
+	display none
+.play
+	&.small
+		margin 0 auto
+		width 20em
+.input
+	border 1px solid gris_claro
+	border-radius 5px
+	height 2.5em
+	line-height 2.5em
+	padding 0 1em 0 2em
+	outline 0
+.search-icon
+	position absolute
+	left 10px
+	top 13px
+	color gris_claro
+.close-icon 
+	color gris_claro
+	font-size 18px
+	position absolute
+	right 10px
+	top 9px
+// .playing
+// 	.description
+// 		text-align center
+.song
+	display inline-block
+	font-size 1rem
+	margin-bottom 2.8em
+	margin-right 2em
+	text-align left
+	width 128px
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0
+
+.logo
+.playlist
+	display none
+
+.playlist 
+	width 28.5em
+	padding 0 2em
+	border-left 1px solid gris_claro
+	height 500px
+	overflow-y auto
+	.list
+		padding 0
+		margin 0
+	.item
+		padding 1em 0
+		list-style none
+	.action
+		font-size 14px
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 2em
+	.play
+		&.medium
+			width auto
+
+	.image
+		img
+			width 100%
+			height auto
+
+@media screen and (min-width:1000px)
+	body
+		background gris_mas_claro
+	.btn-menu
+		display none
+	.logo
+		display block
+	.play
+		margin 0 auto
+		&.large
+			overflow hidden
+			width 62.5em
+			.music
+				width 23em
+
+	.header
+		background gris_mas_claro
+		margin-bottom 1em
+		overflow hidden
+		&.border-bottom
+			border none
+		.title
+			display none
+		
+	.menu
+		display block
+		width 62.5em
+		margin 0 auto
+		.list
+			padding 0
+			margin 0
+		.item
+			list-style none
+			float left
+			border-top 5px solid transparent
+			&:hover
+				border-top 5px solid gris_claro
+			a
+				color gris_oscuro
+				display block
+				padding .5em
+				text-transform uppercase
+	.music
+		float left
+		.name
+		.author
+			display none
+
+	.playlist
+		display block
+
