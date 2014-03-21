@@ -190,9 +190,9 @@ ul
 	width 122px
 .logo
 	background white
-	overflow hidden
 	padding 1.3em 0
 	display none
+	clearfix()
 .avatar
 	width 38px
 	height 38px
@@ -248,6 +248,7 @@ ul
 				padding 1em
 				text-transform uppercase
 				border-top 5px solid transparent
+				transition .3s border-top
 				&:hover
 					border-top 5px solid gris_claro
 	.music
