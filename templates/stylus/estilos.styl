@@ -6,6 +6,7 @@ gris_oscuro = #333333
 gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
+rosa = #EC297B
 
 a
 	text-decoration none
@@ -26,6 +27,19 @@ ul
 	margin-top -10px
 	position absolute
 	top 50%
+.btn
+	background gris_oscuro
+	border-radius 5px
+	color white
+	display inline-block
+	margin .2em auto
+	text-align center
+	padding .75em 2em
+	width 100%
+.btn-submit
+	margin 0 auto
+	background rosa
+	width 200px
 //oocss classes
 .container
 	padding 1.4rem
@@ -155,12 +169,15 @@ ul
 	border 1px solid gris_claro
 	height 2.5em
 	border-radius 5px
-	padding 0 1em 0 2em
-.search-icon
-	position absolute
-	left .5em
-	top .8em
+	padding 0 2em
+.input-icon
 	color gris_claro
+	position relative
+	left 1.75em
+	top .2em
+.input-group
+	margin .5em auto
+	text-align center
 .close-icon
 	position absolute
 	top .5em
