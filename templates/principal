@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<header>
+		<div class="p_principal center-block">
+			<div class="logo">
+				<img src="img/logo.png" alt="Sfotipy"/>
+			</div>
+			<div class="sub-text">
+				<h2>Toda la música que te gusta, en todas partes</h2>
+			</div>
+			<div class="botonera">
+				<button class="btn_connect fb">
+					<div class="icon-facebook"></div>
+					<span>Conéctate con Facebook</span>
+				</button>
+				<button class="btn_connect tw">
+					<div class="icon-twitter"></div>
+					<span>Conéctate con Twitter</span>
+				</button>
+			</div>
+		</div>
+	</header>
+	<section class="user_option_enter">
+		<article class="botonera">
+			<a href="#">Entrar</a><a href="#">Crear cuenta</a>
+		</article>
+		<article class="login_box">
+			<h2>Identifícate</h2>
+			<form action="" class="login">
+				<div class="input_container">
+					<label for="" class="icon-user"></label>
+					<input type="text" placeholder="Usuario o email" class="username"/>
+				</div>
+				<div class="input_container">
+					<label for="" class="icon-lock"></label>
+					<input type="password" placeholder="Contraseña" class="password"/>
+				</div>
+				<div class="btn">
+					<button>
+						<span>Identificarme</span>
+					</button>
+				</div>
+			</form>
+
+		</article>
+		<article class="register_box">
+			<h2>Crea una cuenta</h2>
+			<form action="#" class="register">
+				<div class="input_container">
+					<label for="" class="icon-user"></label>
+					<input type="text" placeholder="Usuario" class="username"/>
+				</div>
+				<div class="input_container">
+					<label for="" class="icon-mail"></label>
+					<input type="email" placeholder="Email" class="email"/>
+				</div>
+				<div class="input_container">
+					<label for="" class="icon-lock"></label>
+					<input type="password" placeholder="Contraseña" class="password"/>
+				</div>
+				<div class="input_container">
+					<label for="" class="icon-lock"></label>			
+					<input type="password" placeholder="Confirmar contraseña" class="password"/>
+				</div>
+				<div class="btn">
+					<button>
+						<span>Registrarme</span>
+					</button>
+				</div>
+			</form>
+		</article>
+	</section>
+	<section class="desc">
+		<article class="itm">
+			<div class="img_container">
+				<img src="img/001.png" alt="Escucha">
+			</div>
+			<div class="text">
+				<h3>Escucha</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</article>
+		<article class="itm">
+			<div class="img_container">
+				<img src="img/002.png" alt="Comparte">
+			</div>
+			<div class="text">
+				<h3>Comparte</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</article>
+		<article class="itm">
+			<div class="img_container">
+				<img src="img/003.png" alt="Crea y sigue playlists">
+			</div>
+			<div class="text">
+				<h3>Crea y sigue playlists</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</article>
+		<div class="at_last">
+			<h2>Empieza a escuchar ya</h2>
+		</div>
+	</section>
+	<footer class="principal">
+		<div class="min_logo"></div>
+		<div class="f_links">
+			<a href="#">About us</a>
+			<a href="#">Legal</a>
+		</div>
+	</footer>
+</body>
+</html>
