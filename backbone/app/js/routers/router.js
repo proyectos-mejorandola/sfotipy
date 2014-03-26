@@ -5,6 +5,7 @@ Sfotipy.Router = Backbone.Router.extend({
   },
 
   initialize: function () {
+    this.current = {};
     this.jsonData = {};
     this.albums = new Sfotipy.Collections.Albums();
     this.songs = new Sfotipy.Collections.Songs();
@@ -19,25 +20,13 @@ Sfotipy.Router = Backbone.Router.extend({
   },
 
   album: function (name) {
-    var self = this;
-
     if (Object.keys(this.jsonData) === 0) {
       this.fetchData();
     }
 
     this.songs.reset();
-
-    var album = this.jsonData[name];
-
-    album.songs.forEach(function (song) {
-      self.songs.add(new Sfotipy.Models.Song({
-        album_cover: album.cover,
-        album_name: album.name,
-        author: album.author,
-        name: song.name,
-        length: song.length
-      }));
-    });
+    this.current.album = this.jsonData[name];
+    this.current.album.songs.forEach(this.addSong, this);
   },
 
   fetchData: function () {
@@ -48,16 +37,33 @@ Sfotipy.Router = Backbone.Router.extend({
       self.jsonData = data;
 
       for (var name in data) {
-        var album = data[name];
-
-        self.albums.add(new Sfotipy.Models.Album({
-          name: name,
-          author: album.author,
-          cover: album.cover,
-          year: album.year
-        }));
+        if (data.hasOwnProperty(name)) {
+          self.addAlbum(name, data[name]);
+        }
       }
+
     });
+  },
+
+  addSong: function (song) {
+    var album = this.current.album;
+
+    this.songs.add(new Sfotipy.Models.Song({
+      album_cover: album.cover,
+      album_name: album.name,
+      author: album.author,
+      name: song.name,
+      length: song.length
+    }));
+  },
+
+  addAlbum: function (name, album) {
+    this.albums.add(new Sfotipy.Models.Album({
+      name: name,
+      author: album.author,
+      cover: album.cover,
+      year: album.year
+    }));
   }
 
 });

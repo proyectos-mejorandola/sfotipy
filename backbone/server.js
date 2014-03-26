@@ -1,9 +1,8 @@
 var http = require('http'),
     st   = require('node-static'),
-    opts = { },
+    opts = { cache: false },
     file = new st.Server('./app', opts),
     port = process.env.PORT || 8080;
-
 
 http.createServer(function (req, res) {
     file.serve(req, res);
