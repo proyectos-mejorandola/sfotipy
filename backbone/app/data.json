@@ -1,0 +1,31 @@
+{
+  "G I R L": {
+    "author": "Pharrel Williams",
+    "cover": "/img/songs/girl.jpg",
+    "year": 2014,
+    "songs": [{
+      "name": "Marilyn Monroe",
+      "length": "5:51"
+    }]
+  },
+  "Ride the Lightning": {
+    "author": "Metallica",
+    "cover": "/img/songs/ride-the-lightning.jpg",
+    "year": 1984,
+    "songs": [
+      {
+        "name": "Fight fire with fire",
+        "length": "4:45"
+      },
+      {
+        "name": "Ride the lightning",
+        "length": "6:36"
+      },
+      {
+        "name": "For whom the bell tolls",
+        "length": "5:09"
+      }
+
+      ]
+  }
+}

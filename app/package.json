@@ -1,0 +1,14 @@
+{
+  "name": "sfotipy",
+  "version": "0.0.0",
+  "description": "A Spotify Clone (?)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Julian Duque <julianduquej@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-static": "^0.7.3"
+  }
+}

@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/julian/.nvm/v0.10.26/bin/node',
+1 verbose cli   '/home/julian/.nvm/v0.10.26/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart sfotipy@0.0.0
+6 info start sfotipy@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info sfotipy@0.0.0 Failed to exec start script
+9 error sfotipy@0.0.0 start: `node server.js`
+9 error Exit status 143
+10 error Failed at the sfotipy@0.0.0 start script.
+10 error This is most likely a problem with the sfotipy package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node server.js
+10 error You can get their info via:
+10 error     npm owner ls sfotipy
+10 error There is likely additional logging output above.
+11 error System Linux 3.13.6-1-ARCH
+12 error command "/home/julian/.nvm/v0.10.26/bin/node" "/home/julian/.nvm/v0.10.26/bin/npm" "start"
+13 error cwd /home/julian/Dropbox/data/Teaching/mejorandola-frontend/sfotipy/backbone
+14 error node -v v0.10.26
+15 error npm -v 1.4.3
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
