@@ -4,11 +4,17 @@
   "description": "A Spotify Clone (?)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "bundle": "browserify app/js/main.js -o app/js/app.js"
   },
   "author": "Julian Duque <julianduquej@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-static": "^0.7.3"
+    "node-static": "^0.7.3",
+    "browserify": "^3.33.1",
+    "backbone": "^1.1.2",
+    "underscore": "^1.6.0",
+    "jquery": "^1.11.0",
+    "handlebars": "^1.3.0"
   }
 }
