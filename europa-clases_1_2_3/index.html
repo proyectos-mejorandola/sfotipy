@@ -82,9 +82,9 @@
 					</h3>
 				</div>
 				<div class="buttons-play center padding-asset">
-					<a href="" class="action gray icon-prev"></a>
-					<a href="" class="action gray icon-play"></a>
-					<a href="" class="action gray icon-next"></a>
+					<a href="" class="action gray icon-prev" id="prev"></a>
+					<a href="" class="action gray icon-play" id="play"></a>
+					<a href="" class="action gray icon-next" id="next"></a>
 					<a href="" class="action gray icon-random"></a>
 					<a href="" class="action gray icon-vol"></a>
 				</div>
@@ -189,139 +189,26 @@
 		</div>
 
 	</section>
-	<section class="container padding-container">
-		<article class="song">
+	<section class="container padding-container" id="list">
+	<script type="html/x-handlebars" id="song-tmpl">
+		{{#each songs}}
+		<article class="song" data-id="{{@index}}">
 			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
+				<img src="{{img}}" width="128" height="128" title="{{artist}}">
 			</figure>
 			<p class="name">
-				Girl
+				{{name}}
 			</p>
 			<p class="author">
-				Pharrell Williams
+				{{artist}}
 			</p>
 		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" title="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
+		{{/each}}
+	</script>
 	</section>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/lib/handlebars.js"></script>
+	<script src="js/lib/observable.js"></script>
+	<script src="js/player-mvc.js"></script>
 </body>
 </html>
