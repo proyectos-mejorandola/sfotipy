@@ -1,0 +1,64 @@
+{
+  "G I R L": {
+    "author": "Pharrel Williams",
+    "cover": "/img/songs/girl.jpg",
+    "year": 2014,
+    "songs": [
+      {
+        "name": "Marilyn Monroe",
+        "length": "5:51"
+      },
+      {
+        "name": "Brand New",
+        "length": "4:31"
+      },
+      {
+        "name": "Hunter",
+        "length": "4:00"
+      },
+      {
+        "name": "Gush",
+        "length": "3:54"
+      },
+      {
+        "name": "Happy",
+        "length": "3:53"
+      },
+      {
+        "name": "Come Get it Bae",
+        "length": "3:21"
+      }
+    ]
+  },
+  "Ride the Lightning": {
+    "author": "Metallica",
+    "cover": "/img/songs/ride-the-lightning.jpg",
+    "year": 1984,
+    "songs": [
+      {
+        "name": "Fight fire with fire",
+        "length": "4:45"
+      },
+      {
+        "name": "Ride the lightning",
+        "length": "6:36"
+      },
+      {
+        "name": "For whom the bell tolls",
+        "length": "5:09"
+      },
+      {
+        "name": "Fade to Black",
+        "length": "6:57"
+      },
+      {
+        "name": "Creeping Death",
+        "length": "6:36"
+      },
+      {
+        "name": "The Call of Ktulu",
+        "length": "8:53"
+      }
+    ]
+  }
+}
