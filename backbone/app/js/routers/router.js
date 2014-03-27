@@ -12,7 +12,8 @@ Sfotipy.Router = Backbone.Router.extend({
     this.playlist = new Sfotipy.Views.List({ collection: this.songs });
     this.player = new Sfotipy.Views.Player({ model: new Sfotipy.Models.Song() });
     this.albumlist = new Sfotipy.Views.Albums({ collection: this.albums });
-    Backbone.history.start({ pushState: true });
+
+    Backbone.history.start();
   },
 
   index: function () {
@@ -20,20 +21,23 @@ Sfotipy.Router = Backbone.Router.extend({
   },
 
   album: function (name) {
-    if (Object.keys(this.jsonData) === 0) {
-      this.fetchData();
-    }
+    if (Object.keys(this.jsonData).length === 0) {
+      var self = this;
 
-    this.songs.reset();
-    this.current.album = this.jsonData[name];
-    this.current.album.songs.forEach(this.addSong, this);
+      this.fetchData().done(function () {
+        self.addSongs(name);
+      });
+
+    } else {
+      this.addSongs(name);
+    }
   },
 
   fetchData: function () {
     var self = this;
 
     // Load Data
-    $.getJSON('data.json').then(function (data) {
+    return $.getJSON('data.json').then(function (data) {
       self.jsonData = data;
 
       for (var name in data) {
@@ -43,6 +47,13 @@ Sfotipy.Router = Backbone.Router.extend({
       }
 
     });
+  },
+
+  addSongs: function (name) {
+    this.songs.reset();
+
+    this.current.album = this.jsonData[name];
+    this.current.album.songs.forEach(this.addSong, this);
   },
 
   addSong: function (song) {

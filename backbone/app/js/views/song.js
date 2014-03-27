@@ -27,7 +27,11 @@ Sfotipy.Views.Song = Backbone.View.extend({
     return false;
   },
 
-  love: function () {},
+  love: function () {
 
-  share: function () {}
+  },
+
+  share: function () {
+
+  }
 });

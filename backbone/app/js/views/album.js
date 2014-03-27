@@ -1,10 +1,10 @@
 Sfotipy.Views.Album = Backbone.View.extend({
-  tagName: 'article',
 
+  tagName: 'article',
   className: 'song',
 
   events: {
-    'click figure': 'navigate'
+    'click': 'navigate'
   },
 
   template: Handlebars.compile($("#album-template").html()),
@@ -21,7 +21,7 @@ Sfotipy.Views.Album = Backbone.View.extend({
   },
 
   navigate: function () {
-    Sfotipy.app.navigate("album/" + this.model.get("name"), true);
+    Sfotipy.app.navigate("album/" + this.model.get("name"), { trigger: true });
   }
 
 });
