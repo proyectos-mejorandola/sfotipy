@@ -12,7 +12,7 @@ Sfotipy.Views.Song = Backbone.View.extend({
   template: Handlebars.compile($("#song-template").html()),
 
   initialize: function () {
-    this.listenTo(this.model).on("change", this.render, this);
+    this.listenTo(this.model, "change", this.render, this);
   },
 
   render: function () {
