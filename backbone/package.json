@@ -4,11 +4,32 @@
   "description": "A Spotify Clone (?)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "bundle": "./node_modules/.bin/gulp"
   },
   "author": "Julian Duque <julianduquej@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-static": "^0.7.3"
+    "node-static": "^0.7.3",
+    "backbone": "^1.1.2",
+    "underscore": "^1.6.0",
+    "jquery": "^1.11.0",
+    "handlebars": "^1.3.0"
+  },
+  "devDependencies": {
+    "gulp-uglify": "^0.2.1",
+    "gulp": "^3.5.6",
+    "gulp-imagemin": "^0.1.5",
+    "gulp-strip-debug": "^0.3.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-changed": "^0.2.1",
+    "gulp-minify-html": "^0.1.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-browserify": "^0.5.0",
+    "gulp-minify-css": "^0.3.0"
+  },
+  "subdomain": "sfotipy",
+  "engines": {
+    "node": "0.10.x"
   }
 }
