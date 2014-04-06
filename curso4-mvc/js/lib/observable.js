@@ -9,7 +9,6 @@ Observable.prototype = {
 		this._events = {
 			all: []
 		}
-
 	},
 
 	/**

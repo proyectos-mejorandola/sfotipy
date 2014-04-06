@@ -3,17 +3,12 @@
 @import "fonts.styl"
 
 vendor-prefixes = webkit o ms moz official
-// animacion(parametro)
-// 	-webkit-animation parametro
-// 	-moz-animation parametro
-// 	-o-animation parametro
-// 	-ms-animation parametro
-// 	animation parametro
 
 gris_oscuro = #333333
 gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
+violeta = #cc2f6f
 
 a
 	text-decoration none
@@ -121,6 +116,10 @@ ul
 		top -2px
 		width 10px
 		animation 1s circle infinite
+.active
+	animation 1s inactive forwards 
+.inactive
+	animation 1s active forwards 
 
 @keyframes state
 	0%
@@ -133,6 +132,16 @@ ul
 	100%
 		transform scale(2)
 		opacity 0
+@keyframes  active
+	0%
+		color violeta 
+	100%
+		color gris_claro
+@keyframes  inactive
+	0%
+		color gris_claro
+	100%
+		color violeta 
 .header
 	height 3.5em
 	// a
@@ -255,9 +264,7 @@ ul
 	.music
 		width 32.5em
 		float left
-		.description
-			display none
-	
+
 	.header
 		height auto
 		border none
