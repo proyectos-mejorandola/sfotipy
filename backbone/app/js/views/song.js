@@ -16,7 +16,7 @@ Sfotipy.Views.Song = Backbone.View.extend({
   },
 
   render: function () {
-    var song = this.model.toJSON()
+    var song = this.model.toJSON();
     var html = this.template(song);
     this.$el.html(html);
     return this;

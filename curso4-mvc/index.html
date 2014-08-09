@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Document</title>
+	<title>Sfotipy</title>
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -16,14 +16,14 @@
 				</figure>
 				<div class="user right">
 					<figure class="avatar round left">
-						<img src="img/avatares/leonidas.jpg" alt="@LeonidasEsteban" width="38" height="38">
+						<img src="img/avatares/marztres.jpg" alt="@mejorandola" width="38" height="38">
 					</figure>
-					<span class="left username">@LeonidasEsteban</span>
+					<span class="left username">@mejorandola</span>
 				</div>
 				<div class="search right">
 					<form action="" class="relative">
 						<span class="icon-search search-icon"></span>
-						<input type="text"  placeholder="ejem: Leonidas Esteban" class="input">
+						<input type="text"  placeholder="ej: Get lucky" class="input">
 						<span class="close-icon">x</span>
 					</form>
 				</div>
@@ -56,7 +56,7 @@
 	<section class="playing small medium large">
 		<div class="music">
 			<figure class="image relative">
-				<img src="img/songs/test-playing.jpg" width="320" height="320" alt="Come Get It Bae Pharrell Williams">
+				<img src="//" width="320" height="320" alt="Come Get It Bae Pharrell Williams">
 				<div class="actions padding right-text">
 					<a href="" class="action icon-add"></a>
 					<a href="" class="action icon-love"></a>
@@ -85,10 +85,10 @@
 				</div>
 				<div class="play center-text padding-tb">
 					<a href="" class="action gray icon-prev" id="prev"></a>
-					<a href="" class="action gray icon-play" id="play"></a>
+					<a href="" class="action gray icon-stop active" id="play"></a>
 					<a href="" class="action gray icon-next" id="next"></a>
-					<a href="" class="action gray icon-random"></a>
-					<a href="" class="action gray icon-vol"></a>
+					<a href="" class="action gray icon-random inactive" id="random"></a>
+					<a href="" class="action gray icon-vol active" id="mute"></a>
 				</div>
 			</div>
 		</div>
@@ -96,21 +96,21 @@
 	<section class="container" id="list">	
 	<script type="html/x-handlebars" id="song-tmpl">
 		{{#each songs}}
-		<article class="song" data-id="{{@index}}">
-			<figure class="image">
-				<img src="{{img}}" width="128" height="128" title="{{artist}}">
-			</figure>
-			<p class="name">
-				{{name}}
-			</p>
-			<p class="author">
-				{{artist}}
-			</p>
-		</article>
+			<article class="song" data-id="{{@index}}">
+				<figure class="image">
+					<img src="{{img}}" width="128" height="128" title="{{artist}}">
+				</figure>
+				<p class="name">
+					{{name}}
+				</p>
+				<p class="author">
+					{{artist}}
+				</p>
+			</article>
 		{{/each}}
 	</script>
 	</section>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
 	<script src="js/lib/handlebars.js"></script>
 	<script src="js/lib/observable.js"></script>
 	<script src="js/player-mvc.js"></script>
