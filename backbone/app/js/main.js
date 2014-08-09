@@ -1,3 +1,3 @@
-$(function() {
-  Sfotipy.app = new Sfotipy.Router();
+$( function() {
+	Sfotipy.app = new Sfotipy.Router();
 });
