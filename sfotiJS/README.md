@@ -21,8 +21,8 @@ tecnologías JavaScript desde el cliente al servidor.
 	- Sistema: **Ubuntu 14.04 LTS @ DigitalOcean**
 
 ## Estructura de ficheros y directorios
- - `/app` Contiene la webapp cliente, escrita en Angular.js
- - `/lib` Contiene los archivos del backend, escritos en Node.js/Express
+ - `/client` Contiene la webapp cliente, escrita en Angular.js
+ - `/server` Contiene los archivos del backend, escritos en Node.js/Express
  - `Gulpfile.js` Gestión de tareas en Gulp.js
  - `package.json` Fichero de entrada de la aplicación y declaración de dependencias
  - `bower.json` Fichero con la declaración de dependencias del Frontend
