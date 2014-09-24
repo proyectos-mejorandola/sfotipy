@@ -1,0 +1,25 @@
+{
+  "name": "sfotiJS",
+  "version": "0.0.0",
+  "description": "Proyecto de mejorando.la/frontend utilizando JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proyectos-mejorandola/sfotipy/"
+  },
+  "keywords": [
+    "mean",
+    "mongodb",
+    "express",
+    "angular",
+    "node",
+    "gulp",
+    "bower",
+    "redis"
+  ],
+  "author": "Carlos Azaustre <cazaustre@gmail.com>",
+  "license": "MIT"
+}

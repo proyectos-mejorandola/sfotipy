@@ -1,0 +1,21 @@
+{
+  "name": "sfotiJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/carlosazaustre/sfotipy",
+  "authors": [
+    "Carlos Azaustre <cazaustre@gmail.com>"
+  ],
+  "description": "Proyecto de mejorando.la/frontend utilizando JS",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ]
+}
