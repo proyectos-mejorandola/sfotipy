@@ -2,18 +2,20 @@
 
 var gulp                = require('gulp');
 var connect             = require('gulp-connect');
+var nodemon             = require('gulp-nodemon');
 var historyApiFallback  = require('connect-history-api-fallback');
 var $                   = require('gulp-load-plugins')();
 
-// Development web server
-gulp.task('server', function() {
-  connect.server({
-    root: './app',
-    hostname: '0.0.0.0',
-    port: 8080,
-    livereload: true,
-    middleware: function(connect, opt) {
-      return [historyApiFallback];
-    }
+gulp.task('development', function () {
+  nodemon({
+    script: 'server/app.js',
+    ext: 'js html',
+    env: { 'NODE_ENV': 'development' }
+  })
+  .on('change', [])
+  .on('restart', function() {
+    console.log('Server Restarted!')
   });
 });
+
+gulp.task('default', ['development']);
