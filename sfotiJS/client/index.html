@@ -8,6 +8,7 @@
   <meta name="description" content="Fork del proyecto Sfotipy de Mejorando.la">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- bower:css -->
+  <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css" />
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/main.css">
@@ -17,9 +18,87 @@
   <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <p>
-    Hola Mundo!
-  </p>
+
+  <header class="Header">
+    <figure class="Header-Logo">
+      <img src="assets/logo_header.png" alt="SfotiJS" />
+    </figure>
+    <h2>Toda la música que te gusta, en todas partes</h2>
+    <div class="Sociallogin">
+      <ul>
+        <li><a class="btn btn-fb" href="#">
+          <span class="fa fa-facebook fa-2x"></span>
+          <span class="text-border-left">Connect with facebook</span>
+        </a></li>
+        <li><a class="btn btn-tw" href="#">
+          <span class="fa fa-twitter fa-2x"></span>
+          <span class="text-border-left">Connect with twitter</span>
+        </a></li>
+      </ul>
+    </div>
+    <nav class="Locallogin">
+      <ul>
+        <li><a href="Locallogin-link">Log in</a></li>
+        <li><a href="Locallogin-link">Create an account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="Form-login">
+    <h2>Create account</h2>
+    <form>
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Choose a password">
+      <input type="password" placeholder="Confirm password">
+      <input type="submit" class="btn btn-primary" value="Sign Up">
+    </form>
+  </section>
+
+  <section class="Marketing">
+    <div class="Marketing-copy">
+      <figure>
+        <img src="assets/landing_pic01.jpg" alt="Listening" />
+        <figCaption>
+          <h3>Listening</h3>
+          <p>
+            Lorem iptsum dolor sit amet, consecteur adipiscing elit.
+          </p>
+        </figCaption>
+      </figure>
+    </div>
+    <div class="Marketing-copy">
+      <figure>
+        <img src="assets/landing_pic02.jpg" alt="Listening" />
+        <figCaption>
+          <h3>Listening</h3>
+          <p>
+            Lorem iptsum dolor sit amet, consecteur adipiscing elit.
+          </p>
+        </figCaption>
+      </figure>
+    </div>
+    <div class="Marketing-copy">
+      <figure>
+        <img src="assets/landing_pic03.jpg" alt="Listening" />
+        <figCaption>
+          <h3>Listening</h3>
+          <p>
+            Lorem iptsum dolor sit amet, consecteur adipiscing elit.
+          </p>
+        </figCaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer class="Footer">
+    <img src="assets/logo_footer.png" alt="SfotiJS" />
+    <div class="Footer-links">
+      <a href="#">About us</a>
+      <a href="#">Legal</a>
+    </div>
+  </footer>
+
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
