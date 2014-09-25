@@ -7,6 +7,7 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 app.set('appPath', 'client');
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.route('/*')
   .get(function(req, res) {
