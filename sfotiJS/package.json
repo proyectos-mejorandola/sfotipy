@@ -1,0 +1,42 @@
+{
+  "name": "sfotiJS",
+  "version": "0.0.0",
+  "description": "Proyecto de mejorando.la/frontend utilizando JS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proyectos-mejorandola/sfotipy/"
+  },
+  "keywords": [
+    "mean",
+    "mongodb",
+    "express",
+    "angular",
+    "node",
+    "gulp",
+    "bower",
+    "redis"
+  ],
+  "author": "Carlos Azaustre <cazaustre@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.9.4"
+  },
+  "devDependencies": {
+    "connect-history-api-fallback": "0.0.4",
+    "gulp": "^3.8.8",
+    "gulp-angular-filesort": "^1.0.4",
+    "gulp-connect": "^2.0.6",
+    "gulp-if": "^1.2.4",
+    "gulp-inject": "^1.0.2",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-stylus": "^1.3.3",
+    "gulp-useref": "^1.0.2",
+    "nib": "^1.0.3",
+    "wiredep": "^1.8.5"
+  }
+}

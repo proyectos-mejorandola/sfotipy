@@ -1,0 +1,32 @@
+{
+  "name": "sfotiJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/carlosazaustre/sfotipy",
+  "authors": [
+    "Carlos Azaustre <cazaustre@gmail.com>"
+  ],
+  "description": "Proyecto de mejorando.la/frontend utilizando JS",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es5-shim": "~4.0.3",
+    "json3": "~3.3.2",
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-resource": "~1.2.25",
+    "fontawesome": "~4.2.0"
+  },
+  "devDependencies": {
+    "normalize.styl": "~3.0.0"
+  }
+}
