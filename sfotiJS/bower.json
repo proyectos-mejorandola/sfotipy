@@ -21,6 +21,8 @@
   "dependencies": {
     "es5-shim": "~4.0.3",
     "json3": "~3.3.2",
-    "angular": "~1.2.25"
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-resource": "~1.2.25"
   }
 }

@@ -35,31 +35,31 @@ gulp.task('wiredep', function () {
 
 // Process Stylus files to CSS
 gulp.task('css', function () {
-  gulp.src('./client/css/main.styl')
+  gulp.src('./client/stylesheets/main.styl')
     .pipe(stylus({ use: nib() }))
     .pipe(gulp.dest('./client/css'));
 });
 
 // Inject CSS and JS files into HTML
 gulp.task('inject', function () {
-  return gulp.src('index.html', { cwd: 'client' })
+  return gulp.src('index.html', { cwd: './client' })
     .pipe(inject(
-      gulp.src(['client/js/**/*.js']).pipe(angularFilesort()), {
+      gulp.src(['./client/js/**/*.js']).pipe(angularFilesort()), {
         read: false,
         ignorePath: '/client'
       }))
     .pipe(inject(
-      gulp.src(['client/css/**/*.css']), {
+      gulp.src(['./client/css/**/*.css']), {
         read: false,
         ignorePath: '/client'
       }
     ))
-    .pipe(gulp.dest('client'));
+    .pipe(gulp.dest('./client'));
 });
 
 // Watch the changes and trigger the tasks
 gulp.task('watch', function () {
-  gulp.watch(['./client/css/**/*.styl'], ['css', 'inject']);
+  gulp.watch(['./client/stylesheets/**/*.styl'], ['css', 'inject']);
   gulp.watch(['./client/js/**/*.js'], ['inject']);
   gulp.watch(['./bower.json'], ['wiredep']);
 });
