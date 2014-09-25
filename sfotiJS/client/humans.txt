@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Carlos Azausre    -- Developer -- @carlosazaustre
+    Team Mejorando.la -- Design -- @mejorandola
+
+# TECHNOLOGY COLOPHON
+
+    CSS3 (Stylus), HTML5 (HTML5Boilerplate)
