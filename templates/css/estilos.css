@@ -536,6 +536,9 @@ ul {
   .menu .item a:hover {
     border-top: 5px solid #818181;
   }
+  .menu .item a:first-child{
+      padding: 1em 1em 1em 0;
+  }
   .music {
     width: 32.5em;
     float: left;
